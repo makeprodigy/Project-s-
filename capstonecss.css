@@ -1,0 +1,330 @@
+:root {
+    --main-font: DotGothic16;
+    --secondary-font: Archivo;
+}
+body {
+    width: auto;
+    height: auto;
+}
+#header {
+    display: grid;
+    width: 100%;
+    padding-top: 1.2em;
+    height: 5em;
+    gap: 0.5em;
+    justify-content: center;
+}
+#navbar {
+    background-color: hsl(243, 90%, 94%);
+    padding: 2em 2em;
+    display: flex;
+    justify-content: space-between;
+    border: 1px;
+    border-radius: 1.2em;
+    height: 3em;
+    width: 100%;
+    align-items: center;
+    box-shadow: 0 0.1em 2em hsl(243, 90%, 94%);
+}
+#navbar div{
+    display: flex;
+    gap: 1em;
+}
+#navbar h1 {
+    font-size: 3em;
+    line-height: 2em;
+    font-family: var(--main-font), sans-serif;
+    width: auto;
+    margin: 2em;
+}
+#navbar div a{
+    text-decoration: none;
+    font-family: var(--secondary-font), sans-serif;
+    color: black;
+    font-size: 1.2em;
+    line-height: 1.3em;
+    font-weight: 400;
+}
+#navbar div a:hover{
+    color: hsl(0, 0%, 50%);
+}
+main {
+    display: grid;
+    width: auto;
+    height: auto;
+    padding: 0 3em;
+    justify-content: center;
+    margin: 1em;
+}
+
+main #main_heading{
+    font-family: var(--main-font);
+    font-size: 5em;
+    line-height: 120px;
+    text-align: center;
+}
+#section1 {
+    border: none;
+    gap: 2.5em;
+    margin: 5em 0 5em 0;
+}
+#fcityscape {
+    height: auto;
+    width: 100%;
+    border: 1px;
+}
+
+#section2{
+    display: grid;
+    padding: 48px 0;
+    grid-template-rows: repeat(3,  1fr);
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    margin: 0;
+}
+.main_name {
+    font-family: var(--secondary-font);
+    font-weight: 400px;
+    font-size: 20px;
+    line-height: 24px;
+}
+.secondary_name {
+    font-family: var(--secondary-font);
+    font-weight: 400px;
+    font-size: 17px;
+    line-height: 24px;
+}
+.row1 img{
+    width: 100%;
+    height: auto;
+}
+.row2 img{
+    width: 100%;
+    height: auto;
+}
+.row3 img{
+    width: 100%;
+    height: auto;
+}
+
+#section3 {
+    padding: 48px 0;
+    display: grid;
+    margin: 0;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto 1fr 1fr 1fr;
+    gap: 16px;
+}
+#featured_projects{
+    font-size: 48px;
+    width: 100%;
+    font-weight: 400;
+    font-family: var(--main-font);
+    grid-column: 1/-1;
+}
+.row11 img {
+    width: 100%;
+    height: auto;
+}
+.row22 img {
+    width: 100%;
+    height: auto;
+}
+.row33 img {
+    width: 100%;
+    height: auto;
+}
+#about_section {
+    margin-left: 0;
+    border-bottom: 1px;
+}
+#about {
+    font-family: var(--main-font);
+    font-size: 2em;
+    width: 50%;
+    font-weight: 400;
+}
+#testimonial h2{
+    text-align: center;
+    font-size: 2em;
+    font-weight: 400;
+    font-family: var(--main-font);
+    line-height: 52px;
+}
+#testimonial_cards {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    scrollbar-width: none;
+    mask-image: linear-gradient(to right, black 90%, transparent);
+  -webkit-mask-image: linear-gradient(to right, black 90%, transparent);
+}
+
+#testimonial_cards::-webkit-scrollbar{
+    display: none;
+}
+.cards div {
+    display: flex;
+    align-items: center;
+    gap: 0.3em;
+}
+
+.cards {
+    flex: 0 0 auto;
+    height: auto;
+    width: auto;
+    max-width: 25%;
+    border: 0.5px solid black;
+    margin: 0.9em;
+    border-radius: 10px;
+    padding: 0.7em;
+    padding-top: 0.3em;
+}
+
+.cards div img {
+    height: 2em;
+    width: 2em;
+    border-radius: 50%;
+}
+
+
+.cards > p{
+    font-size: 1.3em;
+    color: hsl(0, 0%, 35%);
+    border-left: 1px solid hsl(0, 0%, 35%);
+    padding: 1.2em;
+}
+#onboarding {
+    width: 100%;
+    height: auto;
+    margin: 10em 0;
+}
+#c_me {
+    font-family: var(--main-font);
+    font-size: 1.5em;
+    font-weight: 400;
+    text-align: center;
+    margin-bottom: 0;
+}
+#fill_form {
+    font-weight: 400;
+    font-size: 1em;
+    font-family: var(--secondary-font);
+    text-align: center;
+    margin-top: 2;
+}
+
+#input_container{
+    display: flex;
+    justify-content: center;
+    gap: 1em;
+}
+#input_container input {
+    height: 4em;
+    width: 3em;
+    border: 0.5px solid black;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 1.2em;
+    display: flex;
+}
+#input_container input::-webkit-outer-spin-button,
+#input_container input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+#button_container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    #submit {
+        height: auto;
+        width: 35em;
+        padding: 8px 16px 8px 16px;
+        border-radius: 8px;
+        background-color: hsl(243, 90%, 50%);
+        color: white;
+        margin: 2em 0;
+        border: none;
+    }
+    #submit:hover{
+        background-color: hsl(240, 100%, 60%);
+    }
+    #skip {
+        border: 1px solid white;
+        background: white;
+        border: none;
+    }
+    #skip:hover{
+        color: hsl(0, 0%, 40%);
+    }
+
+}
+
+
+footer {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    width: 100vw;
+    height: 40em;
+    background-image: url('imgcapstone/footer_image.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-blend-mode: multiply;
+    background-color: rgba(0,0,0,0.5);
+    border: none;
+}
+footer p {
+    color: white;
+    font-size: 2em;
+    font-family: var(--main-font);
+    text-align: center;
+}
+footer div {
+    display: flex;
+    justify-content: center;
+    gap: 1em;
+}
+footer div input {
+    width: 35em;
+    height: 3em;
+    border-radius: 10px;
+    padding: 5px;
+    border: none;
+}
+footer div button {
+    width: 25%;
+    background-color: hsl(240, 100%, 50%);
+    color: white;
+    border-radius: 10px;
+    font-size: 1.1em;
+    border: none;
+}
+footer div button:hover {
+    background-color: hsl(240, 100%, 60%);
+}
+footer .icons i{
+    margin-top: 1.3em;
+    font-size: 2em;
+    color: hsl(0, 0%, 100%);
+    padding: 0.6em;
+}
+
+footer .icons a {
+    text-decoration: none;
+}
+footer .icons i:hover{
+    color: hsl(240, 100%, 70%);
+}
+
+
+
+
+
+
+
+
+
