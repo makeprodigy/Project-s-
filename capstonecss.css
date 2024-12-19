@@ -5,6 +5,8 @@
 body {
     width: auto;
     height: auto;
+    margin: 0;
+    padding: 0;
 }
 #header {
     display: grid;
@@ -16,10 +18,10 @@ body {
 }
 #navbar {
     background-color: hsl(243, 90%, 94%);
-    padding: 2em 2em;
+    padding: 1em 1em;
     display: flex;
-    justify-content: space-between;
-    border: 1px;
+    justify-content: space-evenly;
+    border: 1px solid hsl(243, 90%, 94%);
     border-radius: 1.2em;
     height: 3em;
     width: 100%;
@@ -28,14 +30,17 @@ body {
 }
 #navbar div{
     display: flex;
+    justify-content: space-evenly;
     gap: 1em;
 }
 #navbar h1 {
+    display: flex;
+    justify-content: center;
     font-size: 3em;
     line-height: 2em;
     font-family: var(--main-font), sans-serif;
     width: auto;
-    margin: 2em;
+    margin: 1em;
 }
 #navbar div a{
     text-decoration: none;
@@ -49,7 +54,6 @@ body {
     color: hsl(0, 0%, 50%);
 }
 main {
-    display: grid;
     width: auto;
     height: auto;
     padding: 0 3em;
@@ -79,7 +83,7 @@ main #main_heading{
     padding: 48px 0;
     grid-template-rows: repeat(3,  1fr);
     grid-template-columns: repeat(3, 1fr);
-    gap: 16px;
+    gap: 1em;
     margin: 0;
 }
 .main_name {
@@ -108,12 +112,12 @@ main #main_heading{
 }
 
 #section3 {
-    padding: 48px 0;
+    padding: 3em 0;
     display: grid;
     margin: 0;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: auto 1fr 1fr 1fr;
-    gap: 16px;
+    gap: 1em;
 }
 #featured_projects{
     font-size: 48px;
