@@ -3,46 +3,48 @@
     --secondary-font: Archivo;
 }
 body {
-    width: auto;
-    height: auto;
     margin: 0;
     padding: 0;
 }
 #header {
-    display: grid;
-    width: 100%;
     padding-top: 1.2em;
-    height: 5em;
-    gap: 0.5em;
+    text-align: center;
+    display: flex;
     justify-content: center;
+    width: auto;
+    margin: 0 10%;
+}
+#navbar li {
+    display: block;
+    list-style-type: none;
+    a {
+        text-decoration: none;
+    }
 }
 #navbar {
     background-color: hsl(243, 90%, 94%);
-    padding: 1em 1em;
-    display: flex;
-    justify-content: space-evenly;
     border: 1px solid hsl(243, 90%, 94%);
     border-radius: 1.2em;
-    height: 3em;
-    width: 100%;
-    align-items: center;
+    height: auto;
+    width: auto;
     box-shadow: 0 0.1em 2em hsl(243, 90%, 94%);
 }
-#navbar div{
+#navbar .nav{
     display: flex;
+    height: auto;
+    padding: 0;
+    margin: 0;
+    flex-wrap: wrap;
     justify-content: space-evenly;
+    align-items: center;
     gap: 1em;
 }
-#navbar h1 {
-    display: flex;
-    justify-content: center;
-    font-size: 3em;
-    line-height: 2em;
+#navbar .nav .h1 {
+    font-size: 2em;
     font-family: var(--main-font), sans-serif;
-    width: auto;
-    margin: 1em;
+    text-align: center;
 }
-#navbar div a{
+#navbar .nav li a{
     text-decoration: none;
     font-family: var(--secondary-font), sans-serif;
     color: black;
@@ -50,15 +52,17 @@ body {
     line-height: 1.3em;
     font-weight: 400;
 }
-#navbar div a:hover{
+#navbar .nav li a:hover{
     color: hsl(0, 0%, 50%);
 }
 main {
+    display: flex;
+    flex-wrap: wrap;
     width: auto;
     height: auto;
-    padding: 0 3em;
+    padding: 0 1%;
     justify-content: center;
-    margin: 1em;
+    margin: 0 2%;
 }
 
 main #main_heading{
@@ -155,6 +159,9 @@ main #main_heading{
     font-family: var(--main-font);
     line-height: 52px;
 }
+#testimonial {
+    display: grid;
+}
 #testimonial_cards {
     display: flex;
     flex-wrap: nowrap;
@@ -183,6 +190,10 @@ main #main_heading{
     border-radius: 10px;
     padding: 0.7em;
     padding-top: 0.3em;
+    overflow: auto;
+}
+.cards::-webkit-scrollbar {
+    display: none;
 }
 
 .cards div img {
@@ -244,7 +255,8 @@ main #main_heading{
     flex-direction: column;
     #submit {
         height: auto;
-        width: 35em;
+        width: 50%;
+        max-width: 50%;
         padding: 8px 16px 8px 16px;
         border-radius: 8px;
         background-color: hsl(243, 90%, 50%);
@@ -293,10 +305,11 @@ footer div {
     gap: 1em;
 }
 footer div input {
-    width: 35em;
-    height: 3em;
+    width: 70%;
+    height: auto;
     border-radius: 10px;
-    padding: 5px;
+    padding: 2%;
+    margin: 2%;
     border: none;
 }
 footer div button {
@@ -325,10 +338,33 @@ footer .icons i:hover{
 }
 
 
+@media (max-width:768px) {
+    #navbar .nav {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5em;
+    }
+    #navbar li {
+        width: 90vw;
+    }
+    #navbar .nav li a {
+        text-align: left;
+    }
+}
 
-
-
-
-
-
-
+@media (min-width:769px)
+and (max-width:1024px) {
+    #navbar .nav {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5em;
+    }
+    #navbar li {
+        width: 90vw;
+    }
+    #navbar .nav li a {
+        text-align: left;
+    }
+}
